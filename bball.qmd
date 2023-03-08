@@ -15,12 +15,13 @@ advanced = read_csv("data/advanced_stats.csv")
 ```
 
 ```{r}
- p <-  plot_ly(advanced, x = ~ Season,
+advanced|>
+  plot_ly(x = ~ Season,
          y = ~ `TOV%`,
          z = ~ `AST%`,
          color = ~ Player,
          type = "scatter3d",
          mode = "markers")
-p
+
 ```
 
