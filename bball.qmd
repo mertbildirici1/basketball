@@ -1,0 +1,26 @@
+---
+author: "Mert Bildirici"
+title: "First Project"
+date: 03/08/2023
+---
+
+```{r}
+library(tidyverse)
+library(fivethirtyeight)
+library(plotly)
+```
+
+```{r}
+advanced = read_csv("data/advanced_stats.csv")
+```
+
+```{r}
+ p <-  plot_ly(advanced, x = ~ Season,
+         y = ~ `TOV%`,
+         z = ~ `AST%`,
+         color = ~ Player,
+         type = "scatter3d",
+         mode = "markers")
+p
+```
+
